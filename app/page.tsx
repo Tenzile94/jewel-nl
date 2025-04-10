@@ -1,15 +1,15 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
@@ -17,7 +17,8 @@ export default function Home() {
                   Discover the Art of Fine Jewelry
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Explore the fascinating world of jewelry, from ancient traditions to modern masterpieces.
+                  Explore the fascinating world of jewelry, from ancient
+                  traditions to modern masterpieces.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -45,12 +46,15 @@ export default function Home() {
 
       {/* Featured Categories */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Jewelry Categories</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Jewelry Categories
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Explore our comprehensive guide to different types of jewelry and their unique characteristics.
+                Explore our comprehensive guide to different types of jewelry
+                and their unique characteristics.
               </p>
             </div>
           </div>
@@ -70,8 +74,12 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 p-4">
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                  <p className="text-sm text-white/80">{category.description}</p>
+                  <h3 className="text-xl font-bold text-white">
+                    {category.title}
+                  </h3>
+                  <p className="text-sm text-white/80">
+                    {category.description}
+                  </p>
                 </div>
               </Link>
             ))}
@@ -81,18 +89,24 @@ export default function Home() {
 
       {/* Materials Section */}
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Precious Materials</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Precious Materials
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Learn about the various materials used in creating exquisite jewelry pieces.
+                Learn about the various materials used in creating exquisite
+                jewelry pieces.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8">
             {materials.map((material) => (
-              <div key={material.name} className="flex flex-col items-center space-y-2 rounded-lg border p-4 shadow-sm">
+              <div
+                key={material.name}
+                className="flex flex-col items-center space-y-2 rounded-lg border p-4 shadow-sm"
+              >
                 <div className="h-[150px] w-[150px] overflow-hidden rounded-full">
                   <Image
                     src={material.image || "/placeholder.svg"}
@@ -103,7 +117,9 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-bold">{material.name}</h3>
-                <p className="text-center text-sm text-gray-500 dark:text-gray-400">{material.description}</p>
+                <p className="text-center text-sm text-gray-500 dark:text-gray-400">
+                  {material.description}
+                </p>
               </div>
             ))}
           </div>
@@ -112,7 +128,7 @@ export default function Home() {
 
       {/* History Highlight */}
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <Image
               src="/pharaohs-treasure.png"
@@ -127,8 +143,10 @@ export default function Home() {
                   A Rich History Spanning Millennia
                 </h2>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                  Jewelry has adorned humanity since prehistoric times. From ancient Egyptian gold to Victorian gemstone
-                  masterpieces, each era has contributed unique styles and techniques to the art of jewelry making.
+                  Jewelry has adorned humanity since prehistoric times. From
+                  ancient Egyptian gold to Victorian gemstone masterpieces, each
+                  era has contributed unique styles and techniques to the art of
+                  jewelry making.
                 </p>
               </div>
               <div>
@@ -144,7 +162,7 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 const categories = [
@@ -172,7 +190,7 @@ const categories = [
     image: "/gold-silver-bracelets.png",
     href: "/categories/bracelets",
   },
-]
+];
 
 const materials = [
   {
@@ -183,12 +201,14 @@ const materials = [
   },
   {
     name: "Silver",
-    description: "A lustrous white metal that's more affordable than gold while offering elegant beauty.",
+    description:
+      "A lustrous white metal that's more affordable than gold while offering elegant beauty.",
     image: "/pure-silver-bars.png",
   },
   {
     name: "Platinum",
-    description: "A dense, durable precious metal with a natural white luster, ideal for fine jewelry.",
+    description:
+      "A dense, durable precious metal with a natural white luster, ideal for fine jewelry.",
     image: "/pure-platinum-bars.png",
   },
-]
+];
