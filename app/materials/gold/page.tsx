@@ -1,13 +1,16 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function GoldPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Gold</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Gold
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            The timeless precious metal that has captivated humanity for millennia.
+            The timeless precious metal that has captivated humanity for
+            millennia.
           </p>
         </div>
       </div>
@@ -24,18 +27,21 @@ export default function GoldPage() {
           <div className="flex flex-col justify-center space-y-4">
             <h2 className="text-2xl font-bold">The Enduring Allure of Gold</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Gold has been treasured by virtually every civilization throughout human history. Its warm, yellow glow,
-              resistance to corrosion, and relative rarity have made it a symbol of wealth, power, and divinity across
-              cultures.
+              Gold has been treasured by virtually every civilization throughout
+              human history. Its warm, yellow glow, resistance to corrosion, and
+              relative rarity have made it a symbol of wealth, power, and
+              divinity across cultures.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              As one of the first metals to be worked by humans, gold's history in jewelry dates back to at least 4000
-              BCE. Its malleability—the ability to be hammered into extremely thin sheets—and ductility—the ability to
-              be drawn into wire—made it ideal for early metalworking techniques.
+              As one of the first metals to be worked by humans, gold's history
+              in jewelry dates back to at least 4000 BCE. Its malleability—the
+              ability to be hammered into extremely thin sheets—and
+              ductility—the ability to be drawn into wire—made it ideal for
+              early metalworking techniques.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              Today, gold remains one of the most popular materials for fine jewelry, prized for both its beauty and
-              investment value.
+              Today, gold remains one of the most popular materials for fine
+              jewelry, prized for both its beauty and investment value.
             </p>
           </div>
         </div>
@@ -44,9 +50,14 @@ export default function GoldPage() {
           <h2 className="text-2xl font-bold mb-6">Properties of Gold</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {goldProperties.map((property) => (
-              <div key={property.title} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+              <div
+                key={property.title}
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
+              >
                 <h3 className="font-bold mb-2">{property.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{property.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {property.description}
+                </p>
               </div>
             ))}
           </div>
@@ -56,7 +67,10 @@ export default function GoldPage() {
           <h2 className="text-2xl font-bold mb-6">Types of Gold</h2>
           <div className="grid gap-8">
             {goldTypes.map((type) => (
-              <div key={type.title} className="grid gap-6 md:grid-cols-2 items-center">
+              <div
+                key={type.title}
+                className="grid gap-6 md:grid-cols-2 items-center"
+              >
                 <div className="relative h-[250px]">
                   <Image
                     src={type.image || "/placeholder.svg"}
@@ -67,7 +81,9 @@ export default function GoldPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">{type.title}</h3>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">{type.description}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400">
+                    {type.description}
+                  </p>
                   <ul className="mt-4 space-y-2">
                     {type.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
@@ -83,10 +99,13 @@ export default function GoldPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Gold Purity: Understanding Karats</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Gold Purity: Understanding Karats
+          </h2>
           <p className="text-gray-500 dark:text-gray-400 mb-6">
-            Pure gold (24K) is too soft for most jewelry applications, so it's typically alloyed with other metals to
-            increase durability. The karat system indicates the proportion of pure gold in an alloy.
+            Pure gold (24K) is too soft for most jewelry applications, so it's
+            typically alloyed with other metals to increase durability. The
+            karat system indicates the proportion of pure gold in an alloy.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
@@ -120,13 +139,15 @@ export default function GoldPage() {
               <ol className="space-y-2 list-decimal list-inside">
                 <li>Mix a few drops of mild dish soap in warm water.</li>
                 <li>Soak the gold jewelry for 15-30 minutes.</li>
-                <li>Gently scrub with a soft-bristled brush (like a toothbrush).</li>
+                <li>
+                  Gently scrub with a soft-bristled brush (like a toothbrush).
+                </li>
                 <li>Rinse thoroughly with clean water.</li>
                 <li>Pat dry with a soft, lint-free cloth.</li>
               </ol>
               <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-                For pieces with gemstones, check if the stones can safely be exposed to water and soap. Some gems
-                require special care.
+                For pieces with gemstones, check if the stones can safely be
+                exposed to water and soap. Some gems require special care.
               </p>
             </div>
             <div>
@@ -134,7 +155,9 @@ export default function GoldPage() {
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Store gold pieces separately to prevent scratching.</span>
+                  <span>
+                    Store gold pieces separately to prevent scratching.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
@@ -142,15 +165,23 @@ export default function GoldPage() {
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Avoid exposure to chemicals like chlorine and household cleaners.</span>
+                  <span>
+                    Avoid exposure to chemicals like chlorine and household
+                    cleaners.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Remove gold jewelry before swimming, bathing, or heavy physical activity.</span>
+                  <span>
+                    Remove gold jewelry before swimming, bathing, or heavy
+                    physical activity.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Consider professional cleaning once or twice a year.</span>
+                  <span>
+                    Consider professional cleaning once or twice a year.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -163,14 +194,18 @@ export default function GoldPage() {
             {goldHistory.map((period) => (
               <div key={period.era} className="border rounded-lg p-6">
                 <h3 className="font-bold mb-2">{period.era}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{period.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {period.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Interesting Facts About Gold</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Interesting Facts About Gold
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {goldFacts.map((fact, index) => (
               <div key={index} className="flex items-start space-x-4">
@@ -186,7 +221,7 @@ export default function GoldPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const goldProperties = [
@@ -208,11 +243,13 @@ const goldProperties = [
   },
   {
     title: "Malleability",
-    description: "Extremely malleable; can be hammered into sheets as thin as 0.000013 cm",
+    description:
+      "Extremely malleable; can be hammered into sheets as thin as 0.000013 cm",
   },
   {
     title: "Ductility",
-    description: "Highly ductile; one ounce can be drawn into a wire 50 miles long",
+    description:
+      "Highly ductile; one ounce can be drawn into a wire 50 miles long",
   },
   {
     title: "Corrosion Resistance",
@@ -222,7 +259,7 @@ const goldProperties = [
     title: "Electrical Conductivity",
     description: "Excellent conductor of electricity",
   },
-]
+];
 
 const goldTypes = [
   {
@@ -277,7 +314,7 @@ const goldTypes = [
       "Typically available in 14K and 18K",
     ],
   },
-]
+];
 
 const goldKarats = [
   {
@@ -310,7 +347,7 @@ const goldKarats = [
     parts: "10 parts gold, 14 parts other metals",
     uses: "Affordable jewelry, minimum legal standard for gold in the US",
   },
-]
+];
 
 const goldHistory = [
   {
@@ -353,7 +390,7 @@ const goldHistory = [
     description:
       "Ethical sourcing and sustainability have become important considerations. Recycled gold and responsible mining practices are increasingly valued by consumers.",
   },
-]
+];
 
 const goldFacts = [
   "All the gold ever mined in human history would fit into a cube measuring approximately 21 meters on each side.",
@@ -364,4 +401,4 @@ const goldFacts = [
   "The word 'gold' comes from the Old English word 'geolu', meaning yellow.",
   "Gold is so malleable that it can be rolled thin enough to become transparent. Very thin gold appears greenish-blue because gold reflects red and yellow.",
   "The largest gold nugget ever found was the 'Welcome Stranger' discovered in Australia in 1869, weighing 2,316 troy ounces (72 kg).",
-]
+];

@@ -1,16 +1,18 @@
-import Image from "next/image"
+import Image from "next/image";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function HistoryPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">The History of Jewelry</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            The History of Jewelry
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Explore how jewelry has evolved throughout human history, from prehistoric adornments to modern
-            masterpieces.
+            Explore how jewelry has evolved throughout human history, from
+            prehistoric adornments to modern masterpieces.
           </p>
         </div>
       </div>
@@ -36,7 +38,9 @@ export default function HistoryPage() {
               />
               <div className="flex flex-col justify-center space-y-4">
                 <h2 className="text-2xl font-bold">{period.title}</h2>
-                <p className="text-gray-500 dark:text-gray-400">{period.description}</p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  {period.description}
+                </p>
                 <div className="space-y-2">
                   <h3 className="font-medium">Key Characteristics:</h3>
                   <ul className="space-y-2">
@@ -66,18 +70,24 @@ export default function HistoryPage() {
       </Tabs>
 
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6 text-center">Jewelry Timeline</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">
+          Jewelry Timeline
+        </h2>
         <div className="relative">
           <div className="absolute left-1/2 h-full w-0.5 -translate-x-1/2 bg-gray-200 dark:bg-gray-800" />
           <div className="space-y-12">
             {timelineEvents.map((event, index) => (
               <div
                 key={index}
-                className={`relative flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                className={`relative flex items-center ${
+                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                }`}
               >
                 <div className="flex w-full md:w-1/2">
                   <div
-                    className={`${index % 2 === 0 ? "mr-8 md:mr-12" : "ml-8 md:ml-12"} relative rounded-lg bg-white p-6 shadow-md dark:bg-gray-800`}
+                    className={`${
+                      index % 2 === 0 ? "mr-8 md:mr-12" : "ml-8 md:ml-12"
+                    } relative rounded-lg bg-white p-6 shadow-md dark:bg-gray-800`}
                   >
                     <h3 className="font-bold">{event.year}</h3>
                     <p className="mt-2">{event.description}</p>
@@ -92,7 +102,7 @@ export default function HistoryPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const timelinePeriods = [
@@ -120,7 +130,8 @@ const timelinePeriods = [
     title: "Medieval Jewelry (500 - 1500 CE)",
     description:
       "Medieval jewelry reflected the hierarchical society of the time. Sumptuary laws often dictated who could wear certain types of jewelry. Religious symbolism was prominent, and jewelry often served practical purposes as well as decorative ones.",
-    image: "/placeholder.svg?height=400&width=600&query=medieval gold and gemstone jewelry",
+    image:
+      "/placeholder.svg?height=400&width=600&query=medieval gold and gemstone jewelry",
     characteristics: [
       "Heavy use of religious imagery",
       "Cabochon-cut gemstones (polished rather than faceted)",
@@ -139,7 +150,8 @@ const timelinePeriods = [
     title: "Renaissance Jewelry (1400 - 1700 CE)",
     description:
       "Renaissance jewelry reflected the period's renewed interest in classical art and culture. Jewelry became more intricate, with improved gemstone cutting techniques allowing for greater brilliance. Portraiture of the era shows elaborate jewelry worn by the nobility and wealthy merchants.",
-    image: "/placeholder.svg?height=400&width=600&query=renaissance pendant with pearls and gemstones",
+    image:
+      "/placeholder.svg?height=400&width=600&query=renaissance pendant with pearls and gemstones",
     characteristics: [
       "Pendants with complex designs and religious themes",
       "Development of the rose cut for diamonds",
@@ -158,7 +170,8 @@ const timelinePeriods = [
     title: "Victorian Jewelry (1837 - 1901)",
     description:
       "Victorian jewelry is named after Queen Victoria of England, whose 64-year reign saw various jewelry trends. The era is often divided into three periods: the Romantic period, the Grand period, and the Aesthetic period, each with distinctive styles.",
-    image: "/placeholder.svg?height=400&width=600&query=victorian cameo brooch and locket",
+    image:
+      "/placeholder.svg?height=400&width=600&query=victorian cameo brooch and locket",
     characteristics: [
       "Sentimental and memorial jewelry",
       "Nature motifs including flowers, birds, and insects",
@@ -177,7 +190,8 @@ const timelinePeriods = [
     title: "Modern Jewelry (1900 - Present)",
     description:
       "The 20th and 21st centuries have seen rapid changes in jewelry styles, from the flowing lines of Art Nouveau to the geometric patterns of Art Deco, and from the bold statements of mid-century design to contemporary artistic expressions.",
-    image: "/placeholder.svg?height=400&width=600&query=modern art deco and contemporary jewelry",
+    image:
+      "/placeholder.svg?height=400&width=600&query=modern art deco and contemporary jewelry",
     characteristics: [
       "Experimentation with new materials",
       "Influence of fashion trends on jewelry design",
@@ -191,7 +205,7 @@ const timelinePeriods = [
       "Contemporary artist-designed pieces",
     ],
   },
-]
+];
 
 const timelineEvents = [
   {
@@ -224,15 +238,18 @@ const timelineEvents = [
   },
   {
     year: "1477 CE",
-    description: "Archduke Maximilian gives Mary of Burgundy the first diamond engagement ring",
+    description:
+      "Archduke Maximilian gives Mary of Burgundy the first diamond engagement ring",
   },
   {
     year: "1700s",
-    description: "Development of the brilliant cut diamond increases sparkle and brilliance",
+    description:
+      "Development of the brilliant cut diamond increases sparkle and brilliance",
   },
   {
     year: "1837",
-    description: "Tiffany & Co. founded, later becoming an iconic jewelry brand",
+    description:
+      "Tiffany & Co. founded, later becoming an iconic jewelry brand",
   },
   {
     year: "1895",
@@ -240,7 +257,8 @@ const timelineEvents = [
   },
   {
     year: "1920s",
-    description: "Art Deco style introduces geometric patterns and bright colors",
+    description:
+      "Art Deco style introduces geometric patterns and bright colors",
   },
   {
     year: "1948",
@@ -248,6 +266,7 @@ const timelineEvents = [
   },
   {
     year: "2000s",
-    description: "Computer-aided design and 3D printing revolutionize jewelry manufacturing",
+    description:
+      "Computer-aided design and 3D printing revolutionize jewelry manufacturing",
   },
-]
+];

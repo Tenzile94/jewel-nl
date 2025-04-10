@@ -1,13 +1,16 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function GemstonesPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Gemstones</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Gemstones
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Nature's colorful treasures that have captivated humanity for millennia.
+            Nature's colorful treasures that have captivated humanity for
+            millennia.
           </p>
         </div>
       </div>
@@ -24,19 +27,24 @@ export default function GemstonesPage() {
           <div className="flex flex-col justify-center space-y-4">
             <h2 className="text-2xl font-bold">The Allure of Gemstones</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Gemstones have fascinated humanity since prehistoric times, prized for their beauty, rarity, and perceived
-              mystical properties. These naturally occurring minerals, when cut and polished, reveal extraordinary
-              colors, patterns, and optical effects that have made them coveted treasures throughout history.
+              Gemstones have fascinated humanity since prehistoric times, prized
+              for their beauty, rarity, and perceived mystical properties. These
+              naturally occurring minerals, when cut and polished, reveal
+              extraordinary colors, patterns, and optical effects that have made
+              them coveted treasures throughout history.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              Beyond their aesthetic appeal, gemstones have carried profound cultural significance across civilizations.
-              They've adorned royalty, symbolized power, represented spiritual beliefs, and marked important life
-              events. Today, they continue to be central elements in fine jewelry, combining natural beauty with
-              artisanal craftsmanship.
+              Beyond their aesthetic appeal, gemstones have carried profound
+              cultural significance across civilizations. They've adorned
+              royalty, symbolized power, represented spiritual beliefs, and
+              marked important life events. Today, they continue to be central
+              elements in fine jewelry, combining natural beauty with artisanal
+              craftsmanship.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              From the fiery brilliance of diamonds to the rich blue depths of sapphires, each gemstone variety offers
-              its own unique characteristics and charm.
+              From the fiery brilliance of diamonds to the rich blue depths of
+              sapphires, each gemstone variety offers its own unique
+              characteristics and charm.
             </p>
           </div>
         </div>
@@ -47,36 +55,49 @@ export default function GemstonesPage() {
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Precious Gemstones</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Traditionally, only four gemstones were considered "precious": diamonds, rubies, sapphires, and
-                emeralds. These stones earned this distinction due to their exceptional hardness, rarity, and enduring
-                appeal throughout history.
+                Traditionally, only four gemstones were considered "precious":
+                diamonds, rubies, sapphires, and emeralds. These stones earned
+                this distinction due to their exceptional hardness, rarity, and
+                enduring appeal throughout history.
               </p>
               <p className="text-gray-500 dark:text-gray-400">
-                While the precious/semi-precious distinction is somewhat outdated in modern gemology (as some
-                "semi-precious" stones can be rarer and more valuable than "precious" ones), these four gems continue to
-                hold special status in the jewelry world.
+                While the precious/semi-precious distinction is somewhat
+                outdated in modern gemology (as some "semi-precious" stones can
+                be rarer and more valuable than "precious" ones), these four
+                gems continue to hold special status in the jewelry world.
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Semi-Precious Gemstones</h3>
+              <h3 className="text-xl font-bold mb-4">
+                Semi-Precious Gemstones
+              </h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">
-                All other gemstones fall into the "semi-precious" category, though this term can be misleading as it
-                encompasses stones of varying rarity, durability, and value. This diverse group includes amethyst,
-                topaz, garnet, opal, aquamarine, tourmaline, peridot, and many others.
+                All other gemstones fall into the "semi-precious" category,
+                though this term can be misleading as it encompasses stones of
+                varying rarity, durability, and value. This diverse group
+                includes amethyst, topaz, garnet, opal, aquamarine, tourmaline,
+                peridot, and many others.
               </p>
               <p className="text-gray-500 dark:text-gray-400">
-                Semi-precious stones offer a wider range of colors, patterns, and optical effects than the "big four,"
-                providing jewelry designers with a vast palette of options for creative expression.
+                Semi-precious stones offer a wider range of colors, patterns,
+                and optical effects than the "big four," providing jewelry
+                designers with a vast palette of options for creative
+                expression.
               </p>
             </div>
           </div>
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">The "Big Four" Precious Gemstones</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            The "Big Four" Precious Gemstones
+          </h2>
           <div className="grid gap-8">
             {preciousGems.map((gem) => (
-              <div key={gem.name} className="grid gap-6 md:grid-cols-2 items-center">
+              <div
+                key={gem.name}
+                className="grid gap-6 md:grid-cols-2 items-center"
+              >
                 <div className="relative h-[250px]">
                   <Image
                     src={gem.image || "/placeholder.svg"}
@@ -87,19 +108,24 @@ export default function GemstonesPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">{gem.name}</h3>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">{gem.description}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400">
+                    {gem.description}
+                  </p>
                   <div className="mt-4 grid grid-cols-2 gap-4">
                     <div>
                       <h4 className="font-medium">Properties</h4>
                       <ul className="mt-2 space-y-1">
                         <li className="text-sm">
-                          <span className="font-medium">Hardness:</span> {gem.hardness}
+                          <span className="font-medium">Hardness:</span>{" "}
+                          {gem.hardness}
                         </li>
                         <li className="text-sm">
-                          <span className="font-medium">Color:</span> {gem.color}
+                          <span className="font-medium">Color:</span>{" "}
+                          {gem.color}
                         </li>
                         <li className="text-sm">
-                          <span className="font-medium">Source:</span> {gem.source}
+                          <span className="font-medium">Source:</span>{" "}
+                          {gem.source}
                         </li>
                       </ul>
                     </div>
@@ -115,22 +141,32 @@ export default function GemstonesPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Popular Semi-Precious Gemstones</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Popular Semi-Precious Gemstones
+          </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {semiPreciousGems.map((gem) => (
               <div key={gem.name} className="border rounded-lg overflow-hidden">
                 <div className="relative h-[200px]">
-                  <Image src={gem.image || "/placeholder.svg"} alt={gem.name} fill className="object-cover" />
+                  <Image
+                    src={gem.image || "/placeholder.svg"}
+                    alt={gem.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{gem.name}</h3>
-                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{gem.description}</p>
+                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    {gem.description}
+                  </p>
                   <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
                     <div>
                       <span className="font-medium">Color:</span> {gem.color}
                     </div>
                     <div>
-                      <span className="font-medium">Hardness:</span> {gem.hardness}
+                      <span className="font-medium">Hardness:</span>{" "}
+                      {gem.hardness}
                     </div>
                   </div>
                 </div>
@@ -140,23 +176,34 @@ export default function GemstonesPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Gemstone Properties and Grading</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Gemstone Properties and Grading
+          </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {gemstoneProperties.map((property) => (
-              <div key={property.name} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+              <div
+                key={property.name}
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
+              >
                 <h3 className="font-bold mb-2">{property.name}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{property.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {property.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">The Mohs Scale of Hardness</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            The Mohs Scale of Hardness
+          </h2>
           <p className="text-gray-500 dark:text-gray-400 mb-6">
-            Developed by German mineralogist Friedrich Mohs in 1812, the Mohs scale ranks minerals by their scratch
-            resistance on a scale from 1 (softest) to 10 (hardest). This property is crucial for gemstones used in
-            jewelry, as it indicates how well they'll withstand everyday wear.
+            Developed by German mineralogist Friedrich Mohs in 1812, the Mohs
+            scale ranks minerals by their scratch resistance on a scale from 1
+            (softest) to 10 (hardest). This property is crucial for gemstones
+            used in jewelry, as it indicates how well they'll withstand everyday
+            wear.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
@@ -183,18 +230,27 @@ export default function GemstonesPage() {
         </div>
 
         <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6">Gemstone Treatments and Enhancements</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Gemstone Treatments and Enhancements
+          </h2>
           <p className="text-gray-500 dark:text-gray-400 mb-6">
-            Many gemstones on the market have undergone treatments to enhance their appearance. While these treatments
-            are generally accepted in the industry, ethical sellers should always disclose them to buyers.
+            Many gemstones on the market have undergone treatments to enhance
+            their appearance. While these treatments are generally accepted in
+            the industry, ethical sellers should always disclose them to buyers.
           </p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {gemTreatments.map((treatment) => (
-              <div key={treatment.name} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+              <div
+                key={treatment.name}
+                className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm"
+              >
                 <h3 className="font-bold mb-2">{treatment.name}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{treatment.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {treatment.description}
+                </p>
                 <p className="mt-2 text-sm">
-                  <span className="font-medium">Common in:</span> {treatment.commonIn}
+                  <span className="font-medium">Common in:</span>{" "}
+                  {treatment.commonIn}
                 </p>
               </div>
             ))}
@@ -202,30 +258,47 @@ export default function GemstonesPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Caring for Gemstone Jewelry</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Caring for Gemstone Jewelry
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div>
-              <h3 className="text-xl font-bold mb-4">General Care Guidelines</h3>
+              <h3 className="text-xl font-bold mb-4">
+                General Care Guidelines
+              </h3>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Store gemstone jewelry separately to prevent scratching.</span>
+                  <span>
+                    Store gemstone jewelry separately to prevent scratching.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Remove jewelry before physical activities, swimming, or using household chemicals.</span>
+                  <span>
+                    Remove jewelry before physical activities, swimming, or
+                    using household chemicals.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Clean regularly with mild soap, warm water, and a soft brush.</span>
+                  <span>
+                    Clean regularly with mild soap, warm water, and a soft
+                    brush.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Have professional cleaning and inspection annually.</span>
+                  <span>
+                    Have professional cleaning and inspection annually.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Avoid ultrasonic cleaners for treated gems or those with inclusions.</span>
+                  <span>
+                    Avoid ultrasonic cleaners for treated gems or those with
+                    inclusions.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -235,32 +308,36 @@ export default function GemstonesPage() {
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
                   <span>
-                    <strong>Soft gems</strong> (opal, pearl, amber): Avoid heat, chemicals, and prolonged sunlight.
+                    <strong>Soft gems</strong> (opal, pearl, amber): Avoid heat,
+                    chemicals, and prolonged sunlight.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
                   <span>
-                    <strong>Porous gems</strong> (turquoise, lapis lazuli): Keep away from oils, perfumes, and
-                    cosmetics.
+                    <strong>Porous gems</strong> (turquoise, lapis lazuli): Keep
+                    away from oils, perfumes, and cosmetics.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
                   <span>
-                    <strong>Treated gems</strong>: Follow specific care instructions based on the treatment type.
+                    <strong>Treated gems</strong>: Follow specific care
+                    instructions based on the treatment type.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
                   <span>
-                    <strong>Emeralds</strong>: Most contain natural fissures; clean gently and avoid pressure.
+                    <strong>Emeralds</strong>: Most contain natural fissures;
+                    clean gently and avoid pressure.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
                   <span>
-                    <strong>Pearls</strong>: Wipe with a soft cloth after wearing; store separately from other jewelry.
+                    <strong>Pearls</strong>: Wipe with a soft cloth after
+                    wearing; store separately from other jewelry.
                   </span>
                 </li>
               </ul>
@@ -275,17 +352,22 @@ export default function GemstonesPage() {
               <div key={stone.month} className="border rounded-lg p-4">
                 <h3 className="font-bold">{stone.month}</h3>
                 <div className="mt-2 flex items-center space-x-2">
-                  <div className="h-4 w-4 rounded-full" style={{ backgroundColor: stone.color }}></div>
+                  <div
+                    className="h-4 w-4 rounded-full"
+                    style={{ backgroundColor: stone.color }}
+                  ></div>
                   <span>{stone.stone}</span>
                 </div>
-                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{stone.meaning}</p>
+                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                  {stone.meaning}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const preciousGems = [
@@ -295,9 +377,11 @@ const preciousGems = [
       "The hardest natural substance on Earth, diamonds are formed deep within the Earth under extreme heat and pressure. Their exceptional brilliance and fire come from their ability to disperse white light into the colors of the spectrum.",
     image: "/diamond-gemstone.png",
     hardness: "10 (Mohs scale)",
-    color: "Typically colorless, but can be found in various colors including yellow, brown, blue, pink, and black",
+    color:
+      "Typically colorless, but can be found in various colors including yellow, brown, blue, pink, and black",
     source: "Primarily South Africa, Russia, Botswana, Canada, and Australia",
-    symbolism: "Represents enduring love, purity, and invincibility; traditional for engagement rings",
+    symbolism:
+      "Represents enduring love, purity, and invincibility; traditional for engagement rings",
   },
   {
     name: "Ruby",
@@ -307,7 +391,8 @@ const preciousGems = [
     hardness: "9 (Mohs scale)",
     color: "Red (ranging from pinkish to bluish-red)",
     source: "Myanmar (Burma), Thailand, Sri Lanka, Madagascar, and Mozambique",
-    symbolism: "Associated with passion, protection, and prosperity; the birthstone for July",
+    symbolism:
+      "Associated with passion, protection, and prosperity; the birthstone for July",
   },
   {
     name: "Sapphire",
@@ -316,8 +401,10 @@ const preciousGems = [
     image: "/sapphire-gemstone.png",
     hardness: "9 (Mohs scale)",
     color: "Blue is most common, but available in nearly all colors except red",
-    source: "Kashmir, Myanmar, Sri Lanka, Madagascar, Australia, and Montana (USA)",
-    symbolism: "Represents wisdom, loyalty, and nobility; the birthstone for September",
+    source:
+      "Kashmir, Myanmar, Sri Lanka, Madagascar, Australia, and Montana (USA)",
+    symbolism:
+      "Represents wisdom, loyalty, and nobility; the birthstone for September",
   },
   {
     name: "Emerald",
@@ -327,9 +414,10 @@ const preciousGems = [
     hardness: "7.5-8 (Mohs scale)",
     color: "Green (ranging from yellowish to bluish-green)",
     source: "Colombia, Zambia, Brazil, Zimbabwe, and Afghanistan",
-    symbolism: "Symbolizes rebirth, fertility, and love; the birthstone for May",
+    symbolism:
+      "Symbolizes rebirth, fertility, and love; the birthstone for May",
   },
-]
+];
 
 const semiPreciousGems = [
   {
@@ -404,7 +492,7 @@ const semiPreciousGems = [
     color: "All colors (often multi-colored)",
     hardness: "7-7.5 (Mohs scale)",
   },
-]
+];
 
 const gemstoneProperties = [
   {
@@ -447,7 +535,7 @@ const gemstoneProperties = [
     description:
       "The ratio of a gem's weight compared to an equal volume of water. This property helps identify gems, as each has a characteristic density. Amber is unusually light (1.08), while hematite is notably heavy (5.2).",
   },
-]
+];
 
 const mohsScale = [
   {
@@ -490,7 +578,8 @@ const mohsScale = [
     hardness: "4",
     mineral: "Fluorite",
     examples: "Fluorite",
-    suitability: "Collector stones or very occasional wear in protected settings",
+    suitability:
+      "Collector stones or very occasional wear in protected settings",
   },
   {
     hardness: "3",
@@ -510,7 +599,7 @@ const mohsScale = [
     examples: "Talc",
     suitability: "Not suitable for jewelry",
   },
-]
+];
 
 const gemTreatments = [
   {
@@ -549,7 +638,7 @@ const gemTreatments = [
       "Introducing coloring elements into the surface layer of a gem through high-temperature processes. Can be shallow or deep depending on the process.",
     commonIn: "Sapphire, ruby",
   },
-]
+];
 
 const birthstones = [
   {
@@ -624,4 +713,4 @@ const birthstones = [
     color: "#30D5C8",
     meaning: "Symbolizes success, personal protection, and good fortune",
   },
-]
+];

@@ -1,13 +1,16 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function RingsPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Rings</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Rings
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Explore the world of rings, from symbolic wedding bands to fashion statements.
+            Explore the world of rings, from symbolic wedding bands to fashion
+            statements.
           </p>
         </div>
       </div>
@@ -24,7 +27,9 @@ export default function RingsPage() {
             />
             <div className="flex flex-col justify-center space-y-4">
               <h2 className="text-2xl font-bold">{type.title}</h2>
-              <p className="text-gray-500 dark:text-gray-400">{type.description}</p>
+              <p className="text-gray-500 dark:text-gray-400">
+                {type.description}
+              </p>
               <ul className="space-y-2">
                 {type.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -64,7 +69,7 @@ export default function RingsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const ringTypes = [
@@ -116,7 +121,7 @@ const ringTypes = [
       "Can be passed down through generations as family heirlooms",
     ],
   },
-]
+];
 
 const ringSizes = [
   { us: "4", uk: "H", eu: "47", diameter: "14.9" },
@@ -128,4 +133,4 @@ const ringSizes = [
   { us: "10", uk: "T 1/2", eu: "62", diameter: "19.8" },
   { us: "11", uk: "V 1/2", eu: "64", diameter: "20.6" },
   { us: "12", uk: "Y", eu: "67", diameter: "21.4" },
-]
+];

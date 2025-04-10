@@ -1,13 +1,16 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function WatchesPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Watches</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Watches
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Discover the artistry and precision of fine timepieces that combine functionality with exquisite design.
+            Discover the artistry and precision of fine timepieces that combine
+            functionality with exquisite design.
           </p>
         </div>
       </div>
@@ -16,7 +19,10 @@ export default function WatchesPage() {
         {watchTypes.map((type) => (
           <div key={type.title} className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <Image
-              src={type.image || "/placeholder.svg?height=400&width=600&query=luxury watch timepiece"}
+              src={
+                type.image ||
+                "/placeholder.svg?height=400&width=600&query=luxury watch timepiece"
+              }
               alt={type.title}
               width={600}
               height={400}
@@ -24,7 +30,9 @@ export default function WatchesPage() {
             />
             <div className="flex flex-col justify-center space-y-4">
               <h2 className="text-2xl font-bold">{type.title}</h2>
-              <p className="text-gray-500 dark:text-gray-400">{type.description}</p>
+              <p className="text-gray-500 dark:text-gray-400">
+                {type.description}
+              </p>
               <ul className="space-y-2">
                 {type.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -44,7 +52,9 @@ export default function WatchesPage() {
           {watchMovements.map((movement) => (
             <div key={movement.type} className="rounded-lg border p-4">
               <h3 className="font-bold">{movement.type}</h3>
-              <p className="mt-2 text-sm text-gray-500">{movement.description}</p>
+              <p className="mt-2 text-sm text-gray-500">
+                {movement.description}
+              </p>
               <p className="mt-2 text-sm">Pros: {movement.pros}</p>
               <p className="mt-2 text-sm">Cons: {movement.cons}</p>
             </div>
@@ -69,7 +79,7 @@ export default function WatchesPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const watchTypes = [
@@ -77,7 +87,8 @@ const watchTypes = [
     title: "Dress Watches",
     description:
       "Dress watches are designed to be worn with formal attire. They typically feature slim cases, minimal complications, and elegant designs that complement business or evening wear.",
-    image: "/placeholder.svg?height=400&width=600&query=elegant slim dress watch with leather strap",
+    image:
+      "/placeholder.svg?height=400&width=600&query=elegant slim dress watch with leather strap",
     features: [
       "Typically thin cases (under 12mm) to fit comfortably under shirt cuffs",
       "Usually feature simple dials with minimal complications",
@@ -89,7 +100,8 @@ const watchTypes = [
     title: "Dive Watches",
     description:
       "Dive watches are designed for underwater use, with features that make them suitable for scuba diving and other water activities. They typically offer water resistance to at least 100 meters and include rotating bezels to track dive time.",
-    image: "/placeholder.svg?height=400&width=600&query=professional dive watch with rotating bezel",
+    image:
+      "/placeholder.svg?height=400&width=600&query=professional dive watch with rotating bezel",
     features: [
       "Water resistance of at least 100m, with professional models offering 200-300m or more",
       "Unidirectional rotating bezels to prevent accidental increases in dive time",
@@ -102,7 +114,8 @@ const watchTypes = [
     title: "Chronograph Watches",
     description:
       "Chronograph watches feature stopwatch functionality in addition to standard timekeeping. They typically have additional subdials and pushers on the case to control the chronograph functions.",
-    image: "/placeholder.svg?height=400&width=600&query=luxury chronograph watch with multiple subdials",
+    image:
+      "/placeholder.svg?height=400&width=600&query=luxury chronograph watch with multiple subdials",
     features: [
       "Stopwatch functionality with start, stop, and reset capabilities",
       "Multiple subdials to display elapsed seconds, minutes, and sometimes hours",
@@ -115,7 +128,8 @@ const watchTypes = [
     title: "Pilot Watches",
     description:
       "Pilot watches, originally designed for aviators, feature high legibility, often larger cases, and functionality useful for navigation. Modern pilot watches range from faithful recreations of historical models to contemporary interpretations.",
-    image: "/placeholder.svg?height=400&width=600&query=vintage style pilot watch with large crown",
+    image:
+      "/placeholder.svg?height=400&width=600&query=vintage style pilot watch with large crown",
     features: [
       "Highly legible dials, often with large Arabic numerals",
       "Prominent hands with luminous coating",
@@ -128,7 +142,8 @@ const watchTypes = [
     title: "Luxury Sports Watches",
     description:
       "Luxury sports watches combine elegant design with sporty functionality. This category emerged in the 1970s with models like the Audemars Piguet Royal Oak and Patek Philippe Nautilus, featuring integrated bracelets and distinctive case designs.",
-    image: "/placeholder.svg?height=400&width=600&query=luxury steel sports watch with integrated bracelet",
+    image:
+      "/placeholder.svg?height=400&width=600&query=luxury steel sports watch with integrated bracelet",
     features: [
       "Typically feature integrated bracelets that flow seamlessly from the case",
       "Often have distinctive case shapes and designs",
@@ -137,7 +152,7 @@ const watchTypes = [
       "Generally offer moderate water resistance (50-100m) and durability for active lifestyles",
     ],
   },
-]
+];
 
 const watchMovements = [
   {
@@ -161,7 +176,7 @@ const watchMovements = [
     pros: "Highly accurate; affordable; low maintenance; available in many styles; battery lasts 1-3 years",
     cons: "Less appreciated by collectors; ticking second hand; requires battery changes",
   },
-]
+];
 
 const watchCareTips = [
   {
@@ -194,4 +209,4 @@ const watchCareTips = [
     description:
       "Extreme temperatures can affect lubricants in mechanical watches and battery life in quartz watches. Avoid leaving watches in very hot or cold environments for extended periods.",
   },
-]
+];

@@ -1,13 +1,16 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function SilverPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Silver</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Silver
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            The lustrous white metal with a rich history in jewelry and decorative arts.
+            The lustrous white metal with a rich history in jewelry and
+            decorative arts.
           </p>
         </div>
       </div>
@@ -22,20 +25,25 @@ export default function SilverPage() {
             className="rounded-lg object-cover w-full aspect-[3/2]"
           />
           <div className="flex flex-col justify-center space-y-4">
-            <h2 className="text-2xl font-bold">The Timeless Appeal of Silver</h2>
+            <h2 className="text-2xl font-bold">
+              The Timeless Appeal of Silver
+            </h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Silver has been treasured for its lustrous beauty and workability since ancient times. As one of the first
-              metals discovered and used by humans, silver has played a significant role in currency, tableware,
-              jewelry, and decorative arts throughout history.
+              Silver has been treasured for its lustrous beauty and workability
+              since ancient times. As one of the first metals discovered and
+              used by humans, silver has played a significant role in currency,
+              tableware, jewelry, and decorative arts throughout history.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              Its bright white color, high luster, and excellent reflectivity make silver uniquely beautiful among
-              metals. While it's more abundant in the Earth's crust than gold, silver's beauty and versatility have
-              ensured its status as a precious metal.
+              Its bright white color, high luster, and excellent reflectivity
+              make silver uniquely beautiful among metals. While it's more
+              abundant in the Earth's crust than gold, silver's beauty and
+              versatility have ensured its status as a precious metal.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              Today, silver remains a popular choice for jewelry, offering an elegant aesthetic at a more accessible
-              price point than gold or platinum.
+              Today, silver remains a popular choice for jewelry, offering an
+              elegant aesthetic at a more accessible price point than gold or
+              platinum.
             </p>
           </div>
         </div>
@@ -44,9 +52,14 @@ export default function SilverPage() {
           <h2 className="text-2xl font-bold mb-6">Properties of Silver</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {silverProperties.map((property) => (
-              <div key={property.title} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+              <div
+                key={property.title}
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
+              >
                 <h3 className="font-bold mb-2">{property.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{property.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {property.description}
+                </p>
               </div>
             ))}
           </div>
@@ -56,7 +69,10 @@ export default function SilverPage() {
           <h2 className="text-2xl font-bold mb-6">Types of Silver</h2>
           <div className="grid gap-8">
             {silverTypes.map((type) => (
-              <div key={type.title} className="grid gap-6 md:grid-cols-2 items-center">
+              <div
+                key={type.title}
+                className="grid gap-6 md:grid-cols-2 items-center"
+              >
                 <div className="relative h-[250px]">
                   <Image
                     src={type.image || "/placeholder.svg"}
@@ -67,7 +83,9 @@ export default function SilverPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">{type.title}</h3>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">{type.description}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400">
+                    {type.description}
+                  </p>
                   <ul className="mt-4 space-y-2">
                     {type.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
@@ -85,9 +103,10 @@ export default function SilverPage() {
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-6">Silver Purity Standards</h2>
           <p className="text-gray-500 dark:text-gray-400 mb-6">
-            Pure silver (999 fine silver) is too soft for most practical applications, so it's typically alloyed with
-            other metals, usually copper, to increase durability. Different standards exist around the world to indicate
-            silver purity.
+            Pure silver (999 fine silver) is too soft for most practical
+            applications, so it's typically alloyed with other metals, usually
+            copper, to increase durability. Different standards exist around the
+            world to indicate silver purity.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
@@ -125,36 +144,60 @@ export default function SilverPage() {
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Keep silver away from rubber, latex, and certain plastics.</span>
+                  <span>
+                    Keep silver away from rubber, latex, and certain plastics.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Remove silver jewelry before swimming, bathing, or using household chemicals.</span>
+                  <span>
+                    Remove silver jewelry before swimming, bathing, or using
+                    household chemicals.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Wear your silver regularly—natural oils help prevent tarnish.</span>
+                  <span>
+                    Wear your silver regularly—natural oils help prevent
+                    tarnish.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Wipe silver with a soft cloth after wearing to remove oils and moisture.</span>
+                  <span>
+                    Wipe silver with a soft cloth after wearing to remove oils
+                    and moisture.
+                  </span>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Cleaning Tarnished Silver</h3>
+              <h3 className="text-xl font-bold mb-4">
+                Cleaning Tarnished Silver
+              </h3>
               <ol className="space-y-2 list-decimal list-inside">
                 <li>Use a silver polishing cloth for light tarnish.</li>
-                <li>For moderate tarnish, use a commercial silver cleaner following product instructions.</li>
                 <li>
-                  For a gentle home solution, line a bowl with aluminum foil, add hot water and baking soda (1
-                  tablespoon per cup), and submerge silver items.
+                  For moderate tarnish, use a commercial silver cleaner
+                  following product instructions.
                 </li>
-                <li>For silver with gemstones, check if the stones can safely be exposed to cleaning solutions.</li>
-                <li>Rinse thoroughly after cleaning and dry completely with a soft cloth.</li>
+                <li>
+                  For a gentle home solution, line a bowl with aluminum foil,
+                  add hot water and baking soda (1 tablespoon per cup), and
+                  submerge silver items.
+                </li>
+                <li>
+                  For silver with gemstones, check if the stones can safely be
+                  exposed to cleaning solutions.
+                </li>
+                <li>
+                  Rinse thoroughly after cleaning and dry completely with a soft
+                  cloth.
+                </li>
               </ol>
               <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-                Note: Avoid using toothpaste or abrasive cleaners, which can scratch silver.
+                Note: Avoid using toothpaste or abrasive cleaners, which can
+                scratch silver.
               </p>
             </div>
           </div>
@@ -166,14 +209,18 @@ export default function SilverPage() {
             {silverHistory.map((period) => (
               <div key={period.era} className="border rounded-lg p-6">
                 <h3 className="font-bold mb-2">{period.era}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{period.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {period.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Silver Techniques and Treatments</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Silver Techniques and Treatments
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {silverTechniques.map((technique) => (
               <div key={technique.name} className="flex items-start space-x-4">
@@ -182,7 +229,9 @@ export default function SilverPage() {
                 </div>
                 <div>
                   <h3 className="font-bold">{technique.name}</h3>
-                  <p className="mt-1 text-gray-500 dark:text-gray-400">{technique.description}</p>
+                  <p className="mt-1 text-gray-500 dark:text-gray-400">
+                    {technique.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -190,7 +239,7 @@ export default function SilverPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const silverProperties = [
@@ -212,21 +261,24 @@ const silverProperties = [
   },
   {
     title: "Malleability",
-    description: "Highly malleable; can be hammered into sheets as thin as 0.00025 mm",
+    description:
+      "Highly malleable; can be hammered into sheets as thin as 0.00025 mm",
   },
   {
     title: "Ductility",
-    description: "Extremely ductile; can be drawn into wire finer than human hair",
+    description:
+      "Extremely ductile; can be drawn into wire finer than human hair",
   },
   {
     title: "Reflectivity",
-    description: "Highest optical reflectivity of any metal (95% reflective when polished)",
+    description:
+      "Highest optical reflectivity of any metal (95% reflective when polished)",
   },
   {
     title: "Conductivity",
     description: "Best electrical and thermal conductor of all metals",
   },
-]
+];
 
 const silverTypes = [
   {
@@ -272,7 +324,8 @@ const silverTypes = [
     title: "Coin Silver",
     description:
       "Historically made from melted silver coins, coin silver contains 90% silver and 10% copper. It was commonly used for silverware and jewelry in America during the 18th and 19th centuries before sterling became the standard.",
-    image: "/placeholder.svg?height=250&width=400&query=antique coin silver jewelry",
+    image:
+      "/placeholder.svg?height=250&width=400&query=antique coin silver jewelry",
     features: [
       "Marked with '900' to indicate 90% purity",
       "Slightly more durable but less bright than sterling silver",
@@ -281,7 +334,7 @@ const silverTypes = [
       "Often found in antique pieces and some Native American jewelry",
     ],
   },
-]
+];
 
 const silverStandards = [
   {
@@ -320,7 +373,7 @@ const silverStandards = [
     markings: "EPNS (Electroplated Nickel Silver), Silver on Copper",
     uses: "Affordable silverware, costume jewelry",
   },
-]
+];
 
 const silverHistory = [
   {
@@ -363,7 +416,7 @@ const silverHistory = [
     description:
       "Silver jewelry ranges from traditional to avant-garde designs. Studio jewelry movement elevated silver as an artistic medium beyond its material value.",
   },
-]
+];
 
 const silverTechniques = [
   {
@@ -396,4 +449,4 @@ const silverTechniques = [
     description:
       "A Japanese metalworking technique that creates a wood-grain pattern by fusing layers of different colored metals (often silver combined with copper, gold, or other metals) and then manipulating the layers.",
   },
-]
+];

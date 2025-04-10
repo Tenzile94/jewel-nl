@@ -1,17 +1,27 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function CategoriesPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Jewelry Categories</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Jewelry Categories
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Explore our comprehensive guide to different types of jewelry and their unique characteristics.
+            Explore our comprehensive guide to different types of jewelry and
+            their unique characteristics.
           </p>
         </div>
       </div>
@@ -20,14 +30,21 @@ export default function CategoriesPage() {
         {categories.map((category) => (
           <Card key={category.title} className="overflow-hidden">
             <div className="relative h-[200px] w-full">
-              <Image src={category.image || "/placeholder.svg"} alt={category.title} fill className="object-cover" />
+              <Image
+                src={category.image || "/placeholder.svg"}
+                alt={category.title}
+                fill
+                className="object-cover"
+              />
             </div>
             <CardHeader>
               <CardTitle>{category.title}</CardTitle>
               <CardDescription>{category.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{category.content}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {category.content}
+              </p>
             </CardContent>
             <CardFooter>
               <Link href={category.href} className="w-full">
@@ -38,7 +55,7 @@ export default function CategoriesPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 const categories = [
@@ -90,4 +107,4 @@ const categories = [
     image: "/luxury-watches-collection.png",
     href: "/categories/watches",
   },
-]
+];

@@ -1,11 +1,13 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function AlternativeMaterialsPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Alternative Materials</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Alternative Materials
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             Contemporary and sustainable options for modern jewelry design.
           </p>
@@ -22,20 +24,27 @@ export default function AlternativeMaterialsPage() {
             className="rounded-lg object-cover w-full aspect-[3/2]"
           />
           <div className="flex flex-col justify-center space-y-4">
-            <h2 className="text-2xl font-bold">Beyond Traditional Precious Materials</h2>
+            <h2 className="text-2xl font-bold">
+              Beyond Traditional Precious Materials
+            </h2>
             <p className="text-gray-500 dark:text-gray-400">
-              While gold, silver, and gemstones have dominated jewelry for millennia, contemporary jewelry embraces a
-              much wider range of materials. This expansion reflects changing aesthetics, technological innovations,
-              environmental concerns, and evolving definitions of what makes materials valuable or meaningful.
+              While gold, silver, and gemstones have dominated jewelry for
+              millennia, contemporary jewelry embraces a much wider range of
+              materials. This expansion reflects changing aesthetics,
+              technological innovations, environmental concerns, and evolving
+              definitions of what makes materials valuable or meaningful.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              Alternative materials offer jewelry designers new creative possibilities—unique colors, textures, and
-              properties that traditional materials can't provide. They also often make jewelry more accessible,
-              sustainable, and personally expressive.
+              Alternative materials offer jewelry designers new creative
+              possibilities—unique colors, textures, and properties that
+              traditional materials can't provide. They also often make jewelry
+              more accessible, sustainable, and personally expressive.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              From industrial metals and sustainable woods to recycled plastics and innovative composites, these
-              materials are pushing the boundaries of what jewelry can be and represent in the 21st century.
+              From industrial metals and sustainable woods to recycled plastics
+              and innovative composites, these materials are pushing the
+              boundaries of what jewelry can be and represent in the 21st
+              century.
             </p>
           </div>
         </div>
@@ -44,7 +53,10 @@ export default function AlternativeMaterialsPage() {
           <h2 className="text-2xl font-bold mb-6">Contemporary Metals</h2>
           <div className="grid gap-8">
             {contemporaryMetals.map((metal) => (
-              <div key={metal.name} className="grid gap-6 md:grid-cols-2 items-center">
+              <div
+                key={metal.name}
+                className="grid gap-6 md:grid-cols-2 items-center"
+              >
                 <div className="relative h-[250px]">
                   <Image
                     src={metal.image || "/placeholder.svg"}
@@ -55,7 +67,9 @@ export default function AlternativeMaterialsPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">{metal.name}</h3>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">{metal.description}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400">
+                    {metal.description}
+                  </p>
                   <div className="mt-4 grid grid-cols-2 gap-4">
                     <div>
                       <h4 className="font-medium">Advantages</h4>
@@ -90,16 +104,28 @@ export default function AlternativeMaterialsPage() {
           <h2 className="text-2xl font-bold mb-6">Organic Materials</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {organicMaterials.map((material) => (
-              <div key={material.name} className="border rounded-lg overflow-hidden">
+              <div
+                key={material.name}
+                className="border rounded-lg overflow-hidden"
+              >
                 <div className="relative h-[200px]">
-                  <Image src={material.image || "/placeholder.svg"} alt={material.name} fill className="object-cover" />
+                  <Image
+                    src={material.image || "/placeholder.svg"}
+                    alt={material.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{material.name}</h3>
-                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{material.description}</p>
+                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    {material.description}
+                  </p>
                   <div className="mt-4 text-sm">
                     <p className="font-medium">Best for:</p>
-                    <p className="text-gray-500 dark:text-gray-400">{material.bestFor}</p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      {material.bestFor}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -108,19 +134,33 @@ export default function AlternativeMaterialsPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Synthetic and Composite Materials</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Synthetic and Composite Materials
+          </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {syntheticMaterials.map((material) => (
-              <div key={material.name} className="border rounded-lg overflow-hidden">
+              <div
+                key={material.name}
+                className="border rounded-lg overflow-hidden"
+              >
                 <div className="relative h-[200px]">
-                  <Image src={material.image || "/placeholder.svg"} alt={material.name} fill className="object-cover" />
+                  <Image
+                    src={material.image || "/placeholder.svg"}
+                    alt={material.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-lg">{material.name}</h3>
-                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{material.description}</p>
+                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    {material.description}
+                  </p>
                   <div className="mt-4 text-sm">
                     <p className="font-medium">Applications:</p>
-                    <p className="text-gray-500 dark:text-gray-400">{material.applications}</p>
+                    <p className="text-gray-500 dark:text-gray-400">
+                      {material.applications}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -129,14 +169,18 @@ export default function AlternativeMaterialsPage() {
         </div>
 
         <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6">Sustainable and Ethical Considerations</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Sustainable and Ethical Considerations
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div>
               <h3 className="text-xl font-bold mb-4">Environmental Impact</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">
-                Traditional jewelry materials often come with significant environmental costs. Mining for precious
-                metals and gemstones can lead to deforestation, habitat destruction, water pollution, and high carbon
-                emissions. Alternative materials can offer more sustainable options:
+                Traditional jewelry materials often come with significant
+                environmental costs. Mining for precious metals and gemstones
+                can lead to deforestation, habitat destruction, water pollution,
+                and high carbon emissions. Alternative materials can offer more
+                sustainable options:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -145,41 +189,61 @@ export default function AlternativeMaterialsPage() {
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>FSC-certified woods come from responsibly managed forests</span>
+                  <span>
+                    FSC-certified woods come from responsibly managed forests
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Lab-created gems have a fraction of the environmental footprint of mined stones</span>
+                  <span>
+                    Lab-created gems have a fraction of the environmental
+                    footprint of mined stones
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Upcycled materials give new life to existing resources</span>
+                  <span>
+                    Upcycled materials give new life to existing resources
+                  </span>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">Social Responsibility</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-4">
-                The jewelry industry has faced scrutiny over human rights issues, including conflict minerals, child
-                labor, and unsafe working conditions. Alternative and ethically sourced materials can address these
-                concerns:
+                The jewelry industry has faced scrutiny over human rights
+                issues, including conflict minerals, child labor, and unsafe
+                working conditions. Alternative and ethically sourced materials
+                can address these concerns:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Fair trade certified materials ensure workers receive fair compensation</span>
+                  <span>
+                    Fair trade certified materials ensure workers receive fair
+                    compensation
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Artisanal materials support traditional crafts and local economies</span>
+                  <span>
+                    Artisanal materials support traditional crafts and local
+                    economies
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Transparent supply chains allow consumers to make informed choices</span>
+                  <span>
+                    Transparent supply chains allow consumers to make informed
+                    choices
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Locally sourced materials reduce carbon footprint and support local communities</span>
+                  <span>
+                    Locally sourced materials reduce carbon footprint and
+                    support local communities
+                  </span>
                 </li>
               </ul>
             </div>
@@ -187,7 +251,9 @@ export default function AlternativeMaterialsPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Caring for Alternative Material Jewelry</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Caring for Alternative Material Jewelry
+          </h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -213,10 +279,15 @@ export default function AlternativeMaterialsPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Innovative Designers Working with Alternative Materials</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Innovative Designers Working with Alternative Materials
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {designers.map((designer) => (
-              <div key={designer.name} className="flex items-start space-x-4 border rounded-lg p-4">
+              <div
+                key={designer.name}
+                className="flex items-start space-x-4 border rounded-lg p-4"
+              >
                 <div className="flex-shrink-0 h-16 w-16 relative">
                   <Image
                     src={designer.image || "/placeholder.svg"}
@@ -227,9 +298,12 @@ export default function AlternativeMaterialsPage() {
                 </div>
                 <div>
                   <h3 className="font-bold">{designer.name}</h3>
-                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{designer.description}</p>
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    {designer.description}
+                  </p>
                   <p className="mt-2 text-sm">
-                    <span className="font-medium">Known for:</span> {designer.knownFor}
+                    <span className="font-medium">Known for:</span>{" "}
+                    {designer.knownFor}
                   </p>
                 </div>
               </div>
@@ -238,7 +312,7 @@ export default function AlternativeMaterialsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const contemporaryMetals = [
@@ -322,7 +396,7 @@ const contemporaryMetals = [
       "Less traditional than precious metals",
     ],
   },
-]
+];
 
 const organicMaterials = [
   {
@@ -373,7 +447,7 @@ const organicMaterials = [
     bestFor:
       "Beaded jewelry, bohemian styles, and eco-friendly accessories. Often associated with artisanal and fair trade practices.",
   },
-]
+];
 
 const syntheticMaterials = [
   {
@@ -424,12 +498,13 @@ const syntheticMaterials = [
     applications:
       "Fine jewelry alternatives, colorful statement pieces, and ethical options for traditional gemstone designs without environmental or social concerns.",
   },
-]
+];
 
 const careTips = [
   {
     material: "Titanium & Stainless Steel",
-    cleaning: "Mild soap and water with a soft cloth; ultrasonic cleaners are safe",
+    cleaning:
+      "Mild soap and water with a soft cloth; ultrasonic cleaners are safe",
     storage: "No special requirements; can be stored with other jewelry",
     avoid: "Harsh chemicals like chlorine and bleach; abrasive cleaners",
   },
@@ -441,13 +516,15 @@ const careTips = [
   },
   {
     material: "Wood",
-    cleaning: "Wipe with slightly damp cloth; occasional conditioning with mineral oil",
+    cleaning:
+      "Wipe with slightly damp cloth; occasional conditioning with mineral oil",
     storage: "Dry environment away from direct sunlight; avoid high humidity",
     avoid: "Water immersion; perfumes; extreme temperature changes",
   },
   {
     material: "Horn & Bone",
-    cleaning: "Wipe with slightly damp cloth; occasional conditioning with jojoba oil",
+    cleaning:
+      "Wipe with slightly damp cloth; occasional conditioning with jojoba oil",
     storage: "Dry environment; avoid high humidity",
     avoid: "Prolonged sunlight; water immersion; heat sources",
   },
@@ -459,11 +536,12 @@ const careTips = [
   },
   {
     material: "Leather",
-    cleaning: "Wipe with dry or slightly damp cloth; leather conditioner occasionally",
+    cleaning:
+      "Wipe with dry or slightly damp cloth; leather conditioner occasionally",
     storage: "Dry environment; avoid folding or creasing",
     avoid: "Water immersion; oils; perfumes; direct sunlight",
   },
-]
+];
 
 const designers = [
   {
@@ -471,27 +549,31 @@ const designers = [
     description:
       "A contemporary jewelry artist known for transforming everyday materials into extraordinary wearable art. Her signature work uses Velcro® hook-and-loop fasteners, cut and manipulated into intricate forms.",
     image: "/designer-yong-joo-kim.png",
-    knownFor: "Sculptural pieces made from transformed Velcro® and other industrial materials",
+    knownFor:
+      "Sculptural pieces made from transformed Velcro® and other industrial materials",
   },
   {
     name: "Gustav Reyes",
     description:
       "A pioneer in sustainable wooden jewelry, Reyes creates fluid, organic forms from reclaimed woods. His techniques bring out the natural beauty of the material while creating surprisingly flexible and wearable pieces.",
     image: "/designer-gustav-reyes.png",
-    knownFor: "Bent wood rings and bracelets with seamless construction from reclaimed hardwoods",
+    knownFor:
+      "Bent wood rings and bracelets with seamless construction from reclaimed hardwoods",
   },
   {
     name: "Tara Locklear",
     description:
       "Combining traditional metalsmithing with unexpected materials, Locklear creates bold, colorful jewelry from recycled skateboards and industrial materials, elevating street culture to fine art.",
     image: "/designer-tara-locklear.png",
-    knownFor: "Vibrant jewelry made from recycled skateboard decks combined with precious metals",
+    knownFor:
+      "Vibrant jewelry made from recycled skateboard decks combined with precious metals",
   },
   {
     name: "Anthony Lent",
     description:
       "A master goldsmith who pushes the boundaries of traditional and alternative materials. While working primarily in precious metals, Lent incorporates unusual elements like meteorite, fossilized materials, and industrial compounds.",
     image: "/designer-anthony-lent.png",
-    knownFor: "Whimsical, narrative jewelry combining traditional craftsmanship with unexpected materials",
+    knownFor:
+      "Whimsical, narrative jewelry combining traditional craftsmanship with unexpected materials",
   },
-]
+];

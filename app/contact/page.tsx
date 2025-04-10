@@ -1,40 +1,42 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { useState } from "react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 export default function ContactPage() {
-  const { toast } = useToast()
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // In a real implementation, you would send the form data to your server
-    console.log("Form submitted:", formData)
+    console.log("Form submitted:", formData);
 
     // Show success message
     toast({
       title: "Message Sent",
       description: "Thank you for your message. We'll get back to you soon!",
-    })
+    });
 
     // Reset form
     setFormData({
@@ -42,14 +44,16 @@ export default function ContactPage() {
       email: "",
       subject: "",
       message: "",
-    })
-  }
+    });
+  };
 
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contact Us</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Contact Us
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             Have questions about jewelry? We'd love to hear from you.
           </p>
@@ -61,8 +65,8 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-bold">Get in Touch</h2>
             <p className="mt-2 text-gray-500 dark:text-gray-400">
-              Whether you have questions about jewelry types, historical periods, or just want to share your thoughts,
-              we're here to help.
+              Whether you have questions about jewelry types, historical
+              periods, or just want to share your thoughts, we're here to help.
             </p>
           </div>
 
@@ -84,16 +88,24 @@ export default function ContactPage() {
               <Mail className="mt-1 h-5 w-5 text-primary" />
               <div>
                 <h3 className="font-bold">Email Us</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">info@jewelryworld.example</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">support@jewelryworld.example</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  info@jewelryworld.example
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  support@jewelryworld.example
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <Phone className="mt-1 h-5 w-5 text-primary" />
               <div>
                 <h3 className="font-bold">Call Us</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">+1 (555) 123-4567</p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Monday-Friday: 9am-5pm EST</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  +1 (555) 123-4567
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Monday-Friday: 9am-5pm EST
+                </p>
               </div>
             </div>
           </div>
@@ -183,7 +195,8 @@ export default function ContactPage() {
         <div className="rounded-lg border bg-card p-6 shadow-sm">
           <h2 className="text-2xl font-bold">Send Us a Message</h2>
           <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-            Fill out the form below and we'll get back to you as soon as possible.
+            Fill out the form below and we'll get back to you as soon as
+            possible.
           </p>
           <form onSubmit={handleSubmit} className="mt-6 grid gap-4">
             <div className="grid gap-2">
@@ -253,5 +266,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

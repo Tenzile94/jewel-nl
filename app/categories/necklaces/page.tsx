@@ -1,13 +1,16 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function NecklacesPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Necklaces</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Necklaces
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Discover the variety of necklace styles that have adorned necks throughout history.
+            Discover the variety of necklace styles that have adorned necks
+            throughout history.
           </p>
         </div>
       </div>
@@ -16,7 +19,10 @@ export default function NecklacesPage() {
         {necklaceTypes.map((type) => (
           <div key={type.title} className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <Image
-              src={type.image || "/placeholder.svg?height=400&width=600&query=elegant necklace jewelry"}
+              src={
+                type.image ||
+                "/placeholder.svg?height=400&width=600&query=elegant necklace jewelry"
+              }
               alt={type.title}
               width={600}
               height={400}
@@ -24,7 +30,9 @@ export default function NecklacesPage() {
             />
             <div className="flex flex-col justify-center space-y-4">
               <h2 className="text-2xl font-bold">{type.title}</h2>
-              <p className="text-gray-500 dark:text-gray-400">{type.description}</p>
+              <p className="text-gray-500 dark:text-gray-400">
+                {type.description}
+              </p>
               <ul className="space-y-2">
                 {type.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
@@ -64,7 +72,7 @@ export default function NecklacesPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const necklaceTypes = [
@@ -116,13 +124,38 @@ const necklaceTypes = [
       "Traditional gift for milestone occasions like graduations and weddings",
     ],
   },
-]
+];
 
 const necklaceLengths = [
-  { type: "Collar", inches: "12-13", cm: "30-33", position: "Tightly around the neck" },
-  { type: "Choker", inches: "14-16", cm: "35-41", position: "Base of the neck" },
+  {
+    type: "Collar",
+    inches: "12-13",
+    cm: "30-33",
+    position: "Tightly around the neck",
+  },
+  {
+    type: "Choker",
+    inches: "14-16",
+    cm: "35-41",
+    position: "Base of the neck",
+  },
   { type: "Princess", inches: "17-19", cm: "43-48", position: "Collarbone" },
-  { type: "Matinee", inches: "20-24", cm: "50-61", position: "Between collarbone and bust" },
-  { type: "Opera", inches: "28-36", cm: "71-91", position: "On the bust or below" },
-  { type: "Rope", inches: "36+", cm: "91+", position: "Below the bust or multiple wraps" },
-]
+  {
+    type: "Matinee",
+    inches: "20-24",
+    cm: "50-61",
+    position: "Between collarbone and bust",
+  },
+  {
+    type: "Opera",
+    inches: "28-36",
+    cm: "71-91",
+    position: "On the bust or below",
+  },
+  {
+    type: "Rope",
+    inches: "36+",
+    cm: "91+",
+    position: "Below the bust or multiple wraps",
+  },
+];

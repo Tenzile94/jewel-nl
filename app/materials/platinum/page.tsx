@@ -1,11 +1,13 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function PlatinumPage() {
   return (
-    <div className="container px-4 py-12 md:px-6 md:py-24">
+    <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Platinum</h1>
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Platinum
+          </h1>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             The rare, dense, and durable noble metal prized for fine jewelry.
           </p>
@@ -22,20 +24,26 @@ export default function PlatinumPage() {
             className="rounded-lg object-cover w-full aspect-[3/2]"
           />
           <div className="flex flex-col justify-center space-y-4">
-            <h2 className="text-2xl font-bold">The Exceptional Nature of Platinum</h2>
+            <h2 className="text-2xl font-bold">
+              The Exceptional Nature of Platinum
+            </h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Platinum stands apart from other precious metals with its remarkable combination of rarity, density,
-              durability, and natural white color. Approximately 30 times rarer than gold, platinum is one of the
-              scarcest elements in the Earth's crust.
+              Platinum stands apart from other precious metals with its
+              remarkable combination of rarity, density, durability, and natural
+              white color. Approximately 30 times rarer than gold, platinum is
+              one of the scarcest elements in the Earth's crust.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              While platinum's use in jewelry is relatively recent compared to gold and silver—becoming popular only in
-              the late 19th century—it has quickly established itself as the premier metal for high-end jewelry,
-              particularly for setting diamonds and other precious gemstones.
+              While platinum's use in jewelry is relatively recent compared to
+              gold and silver—becoming popular only in the late 19th century—it
+              has quickly established itself as the premier metal for high-end
+              jewelry, particularly for setting diamonds and other precious
+              gemstones.
             </p>
             <p className="text-gray-500 dark:text-gray-400">
-              Its natural white luster, resistance to tarnish and wear, and hypoallergenic properties make platinum an
-              ideal choice for jewelry meant to last generations.
+              Its natural white luster, resistance to tarnish and wear, and
+              hypoallergenic properties make platinum an ideal choice for
+              jewelry meant to last generations.
             </p>
           </div>
         </div>
@@ -44,19 +52,27 @@ export default function PlatinumPage() {
           <h2 className="text-2xl font-bold mb-6">Properties of Platinum</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {platinumProperties.map((property) => (
-              <div key={property.title} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+              <div
+                key={property.title}
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
+              >
                 <h3 className="font-bold mb-2">{property.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{property.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {property.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Platinum Alloys in Jewelry</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Platinum Alloys in Jewelry
+          </h2>
           <p className="text-gray-500 dark:text-gray-400 mb-6">
-            While platinum is often used in a much purer form than gold or silver, it is still typically alloyed with
-            other platinum group metals to improve its working properties for jewelry.
+            While platinum is often used in a much purer form than gold or
+            silver, it is still typically alloyed with other platinum group
+            metals to improve its working properties for jewelry.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
@@ -83,10 +99,15 @@ export default function PlatinumPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Platinum vs. Other White Metals</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Platinum vs. Other White Metals
+          </h2>
           <div className="grid gap-8">
             {metalComparisons.map((comparison) => (
-              <div key={comparison.title} className="grid gap-6 md:grid-cols-2 items-center">
+              <div
+                key={comparison.title}
+                className="grid gap-6 md:grid-cols-2 items-center"
+              >
                 <div className="relative h-[250px]">
                   <Image
                     src={comparison.image || "/placeholder.svg"}
@@ -97,7 +118,9 @@ export default function PlatinumPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">{comparison.title}</h3>
-                  <p className="mt-2 text-gray-500 dark:text-gray-400">{comparison.description}</p>
+                  <p className="mt-2 text-gray-500 dark:text-gray-400">
+                    {comparison.description}
+                  </p>
                   <div className="mt-4 grid grid-cols-2 gap-4">
                     <div>
                       <h4 className="font-medium">Advantages</h4>
@@ -129,20 +152,25 @@ export default function PlatinumPage() {
         </div>
 
         <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6">Caring for Platinum Jewelry</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Caring for Platinum Jewelry
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div>
               <h3 className="text-xl font-bold mb-4">Cleaning Platinum</h3>
               <ol className="space-y-2 list-decimal list-inside">
                 <li>Mix mild soap with warm water.</li>
                 <li>Soak the platinum jewelry for a few minutes.</li>
-                <li>Gently scrub with a soft-bristled brush, focusing on areas that might collect dirt.</li>
+                <li>
+                  Gently scrub with a soft-bristled brush, focusing on areas
+                  that might collect dirt.
+                </li>
                 <li>Rinse thoroughly with clean water.</li>
                 <li>Pat dry with a soft, lint-free cloth.</li>
               </ol>
               <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-                For pieces with gemstones, ensure the stones can safely be exposed to water and soap. Some gems require
-                special care.
+                For pieces with gemstones, ensure the stones can safely be
+                exposed to water and soap. Some gems require special care.
               </p>
             </div>
             <div>
@@ -150,23 +178,38 @@ export default function PlatinumPage() {
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Have platinum jewelry professionally cleaned and inspected annually.</span>
+                  <span>
+                    Have platinum jewelry professionally cleaned and inspected
+                    annually.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Remove platinum jewelry during rough activities to prevent scratches.</span>
+                  <span>
+                    Remove platinum jewelry during rough activities to prevent
+                    scratches.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Store platinum pieces separately to avoid scratching other jewelry.</span>
+                  <span>
+                    Store platinum pieces separately to avoid scratching other
+                    jewelry.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Polish with a jewelry cloth specifically designed for platinum if needed.</span>
+                  <span>
+                    Polish with a jewelry cloth specifically designed for
+                    platinum if needed.
+                  </span>
                 </li>
                 <li className="flex items-start">
                   <div className="mr-2 h-2 w-2 rounded-full bg-primary mt-2" />
-                  <span>Consider professional re-polishing every few years to restore luster.</span>
+                  <span>
+                    Consider professional re-polishing every few years to
+                    restore luster.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -174,19 +217,25 @@ export default function PlatinumPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Platinum in Jewelry History</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Platinum in Jewelry History
+          </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {platinumHistory.map((period) => (
               <div key={period.era} className="border rounded-lg p-6">
                 <h3 className="font-bold mb-2">{period.era}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{period.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {period.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-6">Interesting Facts About Platinum</h2>
+          <h2 className="text-2xl font-bold mb-6">
+            Interesting Facts About Platinum
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {platinumFacts.map((fact, index) => (
               <div key={index} className="flex items-start space-x-4">
@@ -202,7 +251,7 @@ export default function PlatinumPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const platinumProperties = [
@@ -220,7 +269,8 @@ const platinumProperties = [
   },
   {
     title: "Density",
-    description: "21.45 g/cm³ (one of the densest metals, about twice as dense as silver)",
+    description:
+      "21.45 g/cm³ (one of the densest metals, about twice as dense as silver)",
   },
   {
     title: "Hardness",
@@ -238,20 +288,23 @@ const platinumProperties = [
     title: "Hypoallergenic",
     description: "Naturally hypoallergenic, making it ideal for sensitive skin",
   },
-]
+];
 
 const platinumAlloys = [
   {
     alloy: "Platinum 950",
-    composition: "95% platinum, 5% other metals (often ruthenium, iridium, or cobalt)",
+    composition:
+      "95% platinum, 5% other metals (often ruthenium, iridium, or cobalt)",
     markings: "950, Plat, Platinum",
-    characteristics: "Most common in jewelry; excellent balance of purity and durability",
+    characteristics:
+      "Most common in jewelry; excellent balance of purity and durability",
   },
   {
     alloy: "Platinum 900",
     composition: "90% platinum, 10% other metals (often iridium)",
     markings: "900, Plat, Platinum",
-    characteristics: "Slightly harder than 950; used in some vintage jewelry and settings",
+    characteristics:
+      "Slightly harder than 950; used in some vintage jewelry and settings",
   },
   {
     alloy: "Platinum 850",
@@ -263,21 +316,24 @@ const platinumAlloys = [
     alloy: "Platinum-Iridium",
     composition: "Typically 90-95% platinum with iridium",
     markings: "Varies by specific composition",
-    characteristics: "Harder and more durable; used for settings that need extra strength",
+    characteristics:
+      "Harder and more durable; used for settings that need extra strength",
   },
   {
     alloy: "Platinum-Ruthenium",
     composition: "Typically 95% platinum with ruthenium",
     markings: "Varies by specific composition",
-    characteristics: "Improved casting properties; popular in modern manufacturing",
+    characteristics:
+      "Improved casting properties; popular in modern manufacturing",
   },
   {
     alloy: "Platinum-Cobalt",
     composition: "Typically 95% platinum with cobalt",
     markings: "Varies by specific composition",
-    characteristics: "Magnetic; harder than other platinum alloys; good for precision castings",
+    characteristics:
+      "Magnetic; harder than other platinum alloys; good for precision castings",
   },
-]
+];
 
 const metalComparisons = [
   {
@@ -304,7 +360,8 @@ const metalComparisons = [
     title: "Platinum vs. Palladium",
     description:
       "Palladium is another platinum group metal that has gained popularity as a white metal alternative. It shares many properties with platinum but has some distinct differences.",
-    image: "/placeholder.svg?height=250&width=400&query=palladium and platinum rings comparison",
+    image:
+      "/placeholder.svg?height=250&width=400&query=palladium and platinum rings comparison",
     advantages: [
       "Similar appearance to platinum",
       "Lighter weight (about 40% lighter)",
@@ -324,7 +381,8 @@ const metalComparisons = [
     title: "Platinum vs. Silver",
     description:
       "While both platinum and silver offer a white metal appearance, they differ dramatically in durability, value, and maintenance requirements.",
-    image: "/placeholder.svg?height=250&width=400&query=platinum and silver jewelry comparison",
+    image:
+      "/placeholder.svg?height=250&width=400&query=platinum and silver jewelry comparison",
     advantages: [
       "Much more durable and scratch-resistant",
       "Doesn't tarnish like silver",
@@ -340,7 +398,7 @@ const metalComparisons = [
       "More difficult to resize or repair",
     ],
   },
-]
+];
 
 const platinumHistory = [
   {
@@ -383,7 +441,7 @@ const platinumHistory = [
     description:
       "Since the late 20th century, platinum has regained its status as the premier metal for fine jewelry, particularly for engagement rings and wedding bands, valued for its durability and natural white color.",
   },
-]
+];
 
 const platinumFacts = [
   "All the platinum ever mined throughout history would fit in an average-sized living room.",
@@ -394,4 +452,4 @@ const platinumFacts = [
   "The standard kilogram weight stored in France was made from platinum-iridium alloy due to its stability and resistance to corrosion.",
   "Platinum's name comes from the Spanish word 'platina', meaning 'little silver', as Spanish conquistadors initially considered it an impurity in silver.",
   "Unlike gold, which has been known and used for thousands of years, platinum only became widely used in jewelry in the late 19th century.",
-]
+];
